@@ -1,0 +1,23 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+#include <string.h>
+int main() {
+    char str1[50]="welcome";
+    char str2[50]="to cit";
+    strncat(str1,str2,4);
+    printf("%s",str1);
+    strncpy(str1,str2,4);
+    printf("%s",str1);
+    strrev(str1);
+    puts(str1);
+    if(strcmpi(str1,str2)==0){
+        printf("equal");
+    }
+    else printf("not equal");
+    char delim=",";
+    char res[25] = strtok(str2,delim);
+    while(res!=NULL){
+        printf("\n%s",res);
+        res=strtok(NULL,delim);
+    }
+}
